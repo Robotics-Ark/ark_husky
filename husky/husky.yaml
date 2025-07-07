@@ -1,8 +1,8 @@
-name: "Franka"
+name: "Husky"
 config:
   source: "urdf"
-  urdf_path: "xarm/meshes/xarm6_robot.urdf"
-  class_dir: "../../ark_robots/ark_xarm/xarm"
+  urdf_path: "husky.urdf"
+  class_dir: "../../husky"
   frequency: 240 # default is 240Hz
   base_position:
     - 0

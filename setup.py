@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="franka",
+    name="husky",
     version="0.1.0",
-    description="Franka Panda robot driver for the ARK framework",
+    description="Clearpath Husky robot driver for the ARK framework",
     author="Sarthak Das",
     author_email="sdas4@icloud.com",
     packages=find_packages(),
