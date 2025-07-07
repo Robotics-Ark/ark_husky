@@ -1,8 +1,8 @@
 name: "Husky"
 config:
   source: "urdf"
-  urdf_path: "../../husky/husky.urdf"
-  class_dir: "../../husky"
+  urdf_path: "../husky/husky.urdf"
+  class_dir: "../husky"
   frequency: 240 # default is 240Hz
   base_position:
     - 0
@@ -13,11 +13,23 @@ config:
     - 0
     - 0
     - 1
-  use_fixed_base: true
-  initial_configuration: []
-  ee_index: 0
-  joint_groups:
-    all:
-      control_mode: "position"
-      joints: []
-  
+  use_fixed_base: false
+  initial_configuration: 
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  joint_groups: 
+    wheels: 
+      control_mode: "velocity"
+      joints: 
+        - "front_left_wheel"
+        - "front_right_wheel"
+        - "rear_left_wheel"
+        - "rear_right_wheel"
