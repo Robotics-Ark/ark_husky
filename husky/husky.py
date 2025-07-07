@@ -17,7 +17,7 @@ from arktypes.utils import unpack, pack
 class Drivers(Enum):
     PYBULLET_DRIVER = BulletRobotDriver
 
-class Xarm(Robot):
+class Husky(Robot):
     def __init__(self,
                  name: str,   
                  global_config: Dict[str, Any] = None,
@@ -100,7 +100,7 @@ class Xarm(Robot):
         }
     
     ####################################################
-    ##      Franka Subscriber Callbacks               ##
+    ##      Husky Subscriber Callbacks               ##
     ####################################################
     def _joint_group_command_callback(self, t, channel_name, msg):
         cmd, name = unpack.joint_group_command(msg)
@@ -118,7 +118,7 @@ class Xarm(Robot):
         }
 
     ####################################################
-    ##       Franka Custom Control Methods            ##
+    ##       Husky Custom Control Methods            ##
     ##    note: control_joint_group is default        ##
     ####################################################
 
@@ -130,6 +130,6 @@ class Xarm(Robot):
 
     #####################################################
 
-CONFIG_PATH = "xarm.yaml"
+CONFIG_PATH = "husky.yaml"
 if __name__ == "__main__":
     raise NotImplementedError("This robot is not meant to be run as a standalone node. Please use the ark simulator")
